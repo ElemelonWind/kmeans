@@ -165,7 +165,7 @@ def main():
       if count == 2:
          print ('first means:', means)
          print ('starting sizes:', count_buckets)
-   pix, intMeans = update_picture(img, pix, means)  # region_dict can be an empty dictionary
+   pix, intMeans = update_picture(img, pix, means)
    print ('Final sizes:', count_buckets)
    print ('Final means:')
    for i in range(len(means)):
@@ -174,12 +174,11 @@ def main():
    img_tk1 = ImageTk.PhotoImage(img)
    lbl = tk.Label(window, image = img_tk1).pack()  # display the image at window
    
-   img.save('kmeans/copium.png', 'PNG')  # change to your own filename
+   img.save('kmeans/image.png', 'PNG')
 
    print('Region counts:', count_regions(img, pix, intMeans))
 
    window.mainloop()
-   #img.show()
    
 if __name__ == '__main__': 
    main()
